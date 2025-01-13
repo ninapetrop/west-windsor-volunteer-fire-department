@@ -24,9 +24,6 @@ body
 .col-12
     width: 100%
     flex-basis: 100%
-.col-4
-    flex-basis: 300px
-    flex-grow: 1
 .center-text
     text-align: center
 
@@ -43,6 +40,9 @@ h1, h2, h3
 h2
     font-size: 2.2rem
 
+.mb-12
+    margin-bottom: 50px
+
 .button
     border-radius: 20px
     padding: 15px 20px
@@ -56,79 +56,51 @@ h2
     &:hover
         cursor: pointer
         text-decoration: underline
-.container 
-    width: 100%
-    max-width: 1400px
-    margin: auto
 
-    .col-6
-        flex-basis: 550px
-        flex-grow: 1
-
-nav   
-    padding: 50px 0 
-    font-weight: 500
-    .container
-        justify-content: space-between
-        font-family: $roboto
-        gap: 50px
-        #logo
+nav.navbar  
+    a.navbar-brand
+        div
             display: flex
-        ul 
-            list-style: none
-            padding-left: 0
-            display: flex
-            justify-content: space-around
-            flex-grow: 1
-            gap: 15px
-            max-width: 650px
+            align-items: center
+            img
+                height: 80px
+            p
+                margin-bottom: 0
+    
                 
 #hero 
     background: $red
+    font-family: $roboto
+    color: white
+    h1
+        font:
+            family: $dm-serif
+            weight: bold
+            size: 2.5rem
 
-    .container
-        justify-content: space-between
-        gap: 25px
-        .col-6:first-of-type
-            color: white
-            justify-content: space-around
-            p
-                font-family: $roboto
-        .col-6
-            flex-basis: 450px
-            flex-grow: 1
-
-            h1
-                margin-bottom: 0
-                font:
-                    family: $dm-serif
-                    weight: bold
-                    size: 2.5rem
-
-            p.contact
-                &#emergency
+    #contact-button-container
+        button.contact
+            border: none
+            &#emergency
+                margin-bottom: 25px
+                background: white
+                color: $red
+                &:hover
+                    background: #F2BB05
+                    color: #23231A
+            &#non-emergency
+                background: rgba(255, 255, 255, 0.2)
+                color: white
+                &:hover
                     background: white
                     color: $red
-                    &:hover
-                        background: #F2BB05
-                        color: #23231A
-                &#non-emergency
-                    background: rgba(255, 255, 255, 0.2)
-                    color: white
-                    &:hover
-                        background: white
-                        color: $red
 
 section#quick-links
     background: $red
     .container
-        justify-content: space-between
-        gap: 15px
-        div
-            flex-basis: 200px
-            grow: 1
+        div.col-md-3
+            height: 200px
             text-align: center
-            height: 150px
             color: white
             display: flex
             justify-content: stretch
