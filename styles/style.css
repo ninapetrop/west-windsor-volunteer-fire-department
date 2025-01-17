@@ -128,13 +128,27 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.8rem !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.max-900 {
+  max-width: 900px;
 }
 
 .mb-12 {
   margin-bottom: 50px;
 }
 
+@media (min-width: 1200px) {
+  .p-10vw-l {
+    padding-left: 10vw !important;
+    padding-right: 10vw !important;
+  }
+}
 .button {
   border-radius: 20px;
   padding: 15px 20px;
@@ -170,6 +184,12 @@ nav.navbar a.navbar-brand div p {
   font-family: "DM Serif Text", serif;
   font-weight: bold;
   font-size: 2.5rem;
+}
+#hero div img#hero-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 #hero #contact-button-container button.contact {
   border: none;
@@ -221,42 +241,98 @@ section#quick-links .container div.col-md-3 p {
   font-size: 1.25rem;
 }
 
-section#about {
-  padding-top: 50px;
-}
-section#about .container {
-  padding-bottom: 100px;
-}
-section#about .container .col-50 {
-  width: 50%;
-}
-section#about .container #text-stat {
-  justify-content: space-between;
-  display: flex;
-}
-section#about .container img {
-  width: 100%;
-  height: 100%;
+section#about img {
   -o-object-fit: cover;
      object-fit: cover;
-}
-section#about .container a.button {
-  flex-basis: 150px;
-  background: white;
-}
-section#about #volunteer-float div {
-  width: 850px;
+  width: 100%;
+  height: auto;
   position: relative;
+}
+section#about #img-offset {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section#about #img-offset::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
   background: #F2BB05;
 }
-
-.container {
-  justify-content: space-around;
-}
-.container .col-8 {
-  width: 66.66%;
+section#about #services i.fa-solid {
+  font-size: 3em;
+  color: #d10005;
+  margin-right: 15px;
 }
 
+section#volunteer {
+  background-image: url("https://images.pexels.com/photos/3013676/pexels-photo-3013676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 450px;
+  display: grid;
+  color: white;
+}
+section#volunteer a.button {
+  background: #d10005;
+  color: white;
+}
+
+section#volunteer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+}
+
+section#community-events .event-card {
+  border: solid 1px #9197AE;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  section#community-events .event-card {
+    width: 31%;
+  }
+}
+section#community-events .event-card img.event-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+section#community-events .event-card .event-content {
+  padding: 20px;
+}
+section#community-events .event-card .event-content p.small {
+  margin-bottom: 5px;
+}
+section#community-events .event-card .event-content p.bold {
+  font-size: 1.2rem;
+}
+section#community-events .event-card.dark {
+  position: relative;
+}
+section#community-events .event-card.dark .event-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: end;
+}
+section#community-events .event-card.dark img.event-img {
+  height: 100%;
+}
 .flex.space-between {
   justify-content: space-between;
 }
@@ -270,6 +346,7 @@ footer {
   color: white;
   padding: 75px 0;
   font-size: 1.25rem;
+  border-top: 1rem solid #d10005;
 }
 footer a.button {
   color: white;
