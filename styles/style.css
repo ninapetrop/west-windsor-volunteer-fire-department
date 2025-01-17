@@ -262,6 +262,10 @@ section#about #img-offset::after {
   height: 100%;
   background: #F2BB05;
 }
+section#about #services .col-md-6 p:first-of-type {
+  display: flex;
+  align-items: center;
+}
 section#about #services i.fa-solid {
   font-size: 3em;
   color: #d10005;
