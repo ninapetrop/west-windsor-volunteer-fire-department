@@ -212,6 +212,11 @@ nav.navbar a.navbar-brand div p {
   color: #d10005;
 }
 
+#hero.page-hero {
+  background: #23231A;
+  color: white;
+}
+
 section#quick-links {
   background: #d10005;
 }
@@ -350,7 +355,7 @@ footer {
   color: white;
   padding: 75px 0;
   font-size: 1.25rem;
-  border-top: 1rem solid #d10005;
+  border-top: 1rem solid #9197AE;
 }
 footer a.button {
   color: white;
@@ -459,7 +464,6 @@ footer ul#footer-nav li a {
 #public-education-container div#content-nav {
   position: sticky;
   top: 100px;
-  margin-top: 150px;
 }
 #public-education-container div#content-nav a {
   color: #23231A;
@@ -473,6 +477,12 @@ footer ul#footer-nav li a {
   background: #d10005;
   color: white;
 }
+#public-education-container #public-education-content .list-item {
+  margin-top: 10vw;
+}
+#public-education-container #public-education-content .list-item:first-of-type {
+  margin-top: 0;
+}
 #public-education-container #public-education-content h4 {
   margin-top: 75px;
   margin-bottom: 15px;
@@ -484,4 +494,19 @@ footer ul#footer-nav li a {
   font-family: "DM Serif Text", serif;
   margin-top: 25px;
   margin-bottom: 15px;
+}
+
+.contact-email {
+  text-decoration: none;
+  padding: 10px;
+  transition: ease-in 300ms;
+  border: solid 1px transparent;
+}
+.contact-email:hover {
+  border-bottom: solid 1px #d10005;
+  cursor: pointer;
+}
+.contact-email i {
+  color: #d10005;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

@@ -111,6 +111,9 @@ nav.navbar
                     background: white
                     color: $red
 
+#hero.page-hero
+    background: $black    
+    color: white
 section#quick-links
     background: $red
     .container
@@ -224,11 +227,11 @@ section#community-events
 .flex.wrap
     flex-wrap: wrap
 footer
-    background: #23231A
+    background: $black
     color: white
     padding: 75px 0
     font-size: 1.25rem
-    border-top: 1rem solid $red
+    border-top: 1rem solid $grey
 
     a.button
         color: white
@@ -248,3 +251,16 @@ footer
             color: white
 
 @import 'public-education.sass'
+
+// Contact page
+.contact-email 
+    text-decoration: none
+    padding: 10px
+    transition: ease-in 300ms
+    border: solid 1px transparent
+    &:hover
+        border-bottom: solid 1px $red
+        cursor: pointer
+    i
+        color: $red
+        margin-right: 10px
