@@ -110,11 +110,6 @@ body {
   flex-basis: 100%;
 }
 
-.col-4 {
-  flex-basis: 300px;
-  flex-grow: 1;
-}
-
 .center-text {
   text-align: center;
 }
@@ -133,9 +128,27 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.8rem !important;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.max-900 {
+  max-width: 900px;
+}
+
+.mb-12 {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 1200px) {
+  .p-10vw-l {
+    padding-left: 10vw !important;
+    padding-right: 10vw !important;
+  }
+}
 .button {
   border-radius: 20px;
   padding: 15px 20px;
@@ -151,150 +164,184 @@ h2 {
   text-decoration: underline;
 }
 
-.container {
-  width: 100%;
-  max-width: 1400px;
-  margin: auto;
-}
-.container .col-6 {
-  flex-basis: 550px;
-  flex-grow: 1;
-}
-
-nav {
-  padding: 50px 0;
-  font-weight: 500;
-}
-nav .container {
-  justify-content: space-between;
-  font-family: "Roboto", serif;
-  gap: 50px;
-}
-nav .container #logo {
+nav.navbar a.navbar-brand div {
   display: flex;
+  align-items: center;
 }
-nav .container ul {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  justify-content: space-around;
-  flex-grow: 1;
-  gap: 15px;
-  max-width: 650px;
+nav.navbar a.navbar-brand div img {
+  height: 80px;
+}
+nav.navbar a.navbar-brand div p {
+  margin-bottom: 0;
 }
 
 #hero {
   background: #d10005;
-}
-#hero .container {
-  justify-content: space-between;
-  gap: 25px;
-}
-#hero .container .col-6:first-of-type {
-  color: white;
-  justify-content: space-around;
-}
-#hero .container .col-6:first-of-type p {
   font-family: "Roboto", serif;
+  color: white;
 }
-#hero .container .col-6 {
-  flex-basis: 450px;
-  flex-grow: 1;
-}
-#hero .container .col-6 h1 {
-  margin-bottom: 0;
+#hero h1 {
   font-family: "DM Serif Text", serif;
   font-weight: bold;
   font-size: 2.5rem;
 }
-#hero .container .col-6 p.contact#emergency {
+#hero div img#hero-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+#hero #contact-button-container button.contact {
+  border: none;
+}
+#hero #contact-button-container button.contact#emergency {
+  margin-bottom: 25px;
   background: white;
   color: #d10005;
 }
-#hero .container .col-6 p.contact#emergency:hover {
+#hero #contact-button-container button.contact#emergency:hover {
   background: #F2BB05;
   color: #23231A;
 }
-#hero .container .col-6 p.contact#non-emergency {
+#hero #contact-button-container button.contact#non-emergency {
   background: rgba(255, 255, 255, 0.2);
   color: white;
 }
-#hero .container .col-6 p.contact#non-emergency:hover {
+#hero #contact-button-container button.contact#non-emergency:hover {
   background: white;
   color: #d10005;
+}
+
+#hero.page-hero {
+  background: #23231A;
+  color: white;
 }
 
 section#quick-links {
   background: #d10005;
 }
-section#quick-links .container {
-  justify-content: space-between;
-  gap: 15px;
-}
-section#quick-links .container div {
-  flex-basis: 200px;
-  grow: 1;
+section#quick-links .container div.col-md-3 {
+  height: 200px;
   text-align: center;
-  height: 150px;
   color: white;
   display: flex;
   justify-content: stretch;
   font-family: "Roboto", serif;
 }
-section#quick-links .container div a {
+section#quick-links .container div.col-md-3 a {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-section#quick-links .container div a:hover {
+section#quick-links .container div.col-md-3 a:hover {
   background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
 }
-section#quick-links .container div i {
+section#quick-links .container div.col-md-3 i {
   font-size: 2rem;
 }
-section#quick-links .container div p {
+section#quick-links .container div.col-md-3 p {
   font-size: 1.25rem;
 }
 
-section#about {
-  padding-top: 50px;
-}
-section#about .container {
-  padding-bottom: 100px;
-}
-section#about .container .col-50 {
-  width: 50%;
-}
-section#about .container #text-stat {
-  justify-content: space-between;
-  display: flex;
-}
-section#about .container img {
-  width: 100%;
-  height: 100%;
+section#about img {
   -o-object-fit: cover;
      object-fit: cover;
-}
-section#about .container a.button {
-  flex-basis: 150px;
-  background: white;
-}
-section#about #volunteer-float div {
-  width: 850px;
+  width: 100%;
+  height: auto;
   position: relative;
+}
+section#about #img-offset {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section#about #img-offset::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
   background: #F2BB05;
 }
-
-.container {
-  justify-content: space-around;
+section#about #services .col-md-6 p:first-of-type {
+  display: flex;
+  align-items: center;
 }
-.container .col-8 {
-  width: 66.66%;
+section#about #services i.fa-solid {
+  font-size: 3em;
+  color: #d10005;
+  margin-right: 15px;
 }
 
+section#volunteer {
+  background-image: url("https://images.pexels.com/photos/3013676/pexels-photo-3013676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 450px;
+  display: grid;
+  color: white;
+}
+section#volunteer a.button {
+  background: #d10005;
+  color: white;
+}
+
+section#volunteer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+}
+
+section#community-events .event-card {
+  border: solid 1px #9197AE;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  section#community-events .event-card {
+    width: 31%;
+  }
+}
+section#community-events .event-card img.event-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+section#community-events .event-card .event-content {
+  padding: 20px;
+}
+section#community-events .event-card .event-content p.small {
+  margin-bottom: 5px;
+}
+section#community-events .event-card .event-content p.bold {
+  font-size: 1.2rem;
+}
+section#community-events .event-card.dark {
+  position: relative;
+}
+section#community-events .event-card.dark .event-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: end;
+}
+section#community-events .event-card.dark img.event-img {
+  height: 100%;
+}
 .flex.space-between {
   justify-content: space-between;
 }
@@ -308,6 +355,7 @@ footer {
   color: white;
   padding: 75px 0;
   font-size: 1.25rem;
+  border-top: 1rem solid #9197AE;
 }
 footer a.button {
   color: white;
@@ -416,24 +464,49 @@ footer ul#footer-nav li a {
 #public-education-container div#content-nav {
   position: sticky;
   top: 100px;
-  margin-top: 150px;
 }
 #public-education-container div#content-nav a {
   color: #23231A;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  border: none;
+  border-left: solid 2px #d10005;
+  border-radius: 0;
 }
 #public-education-container div#content-nav a.active {
   background: #d10005;
   color: white;
 }
+#public-education-container #public-education-content .list-item {
+  margin-top: 10vw;
+}
+#public-education-container #public-education-content .list-item:first-of-type {
+  margin-top: 0;
+}
 #public-education-container #public-education-content h4 {
   margin-top: 75px;
   margin-bottom: 15px;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-family: "DM Serif Text", serif;
 }
 #public-education-container #public-education-content h5 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: "DM Serif Text", serif;
   margin-top: 25px;
   margin-bottom: 15px;
+}
+
+.contact-email {
+  text-decoration: none;
+  padding: 10px;
+  transition: ease-in 300ms;
+  border: solid 1px transparent;
+}
+.contact-email:hover {
+  border-bottom: solid 1px #d10005;
+  cursor: pointer;
+}
+.contact-email i {
+  color: #d10005;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

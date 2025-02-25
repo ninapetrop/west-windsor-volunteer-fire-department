@@ -24,9 +24,6 @@ body
 .col-12
     width: 100%
     flex-basis: 100%
-.col-4
-    flex-basis: 300px
-    flex-grow: 1
 .center-text
     text-align: center
 
@@ -41,7 +38,21 @@ h1, h2, h3
     font-family: $dm-serif
 
 h2
-    font-size: 2.2rem
+    font-size: 2.8rem !important
+
+.bold
+    font-weight: bold
+
+.max-900
+    max-width: 900px
+
+.mb-12
+    margin-bottom: 50px
+
+@media (min-width: 1200px)
+    .p-10vw-l
+        padding-left: 10vw !important
+        padding-right: 10vw !important
 
 .button
     border-radius: 20px
@@ -56,79 +67,59 @@ h2
     &:hover
         cursor: pointer
         text-decoration: underline
-.container 
-    width: 100%
-    max-width: 1400px
-    margin: auto
 
-    .col-6
-        flex-basis: 550px
-        flex-grow: 1
-
-nav   
-    padding: 50px 0 
-    font-weight: 500
-    .container
-        justify-content: space-between
-        font-family: $roboto
-        gap: 50px
-        #logo
+nav.navbar  
+    a.navbar-brand
+        div
             display: flex
-        ul 
-            list-style: none
-            padding-left: 0
-            display: flex
-            justify-content: space-around
-            flex-grow: 1
-            gap: 15px
-            max-width: 650px
+            align-items: center
+            img
+                height: 80px
+            p
+                margin-bottom: 0
+    
                 
 #hero 
     background: $red
+    font-family: $roboto
+    color: white
+    h1
+        font:
+            family: $dm-serif
+            weight: bold
+            size: 2.5rem
+    div
+        img#hero-image
+            object-fit: cover
+            height: 100%
+            width: 100%
 
-    .container
-        justify-content: space-between
-        gap: 25px
-        .col-6:first-of-type
-            color: white
-            justify-content: space-around
-            p
-                font-family: $roboto
-        .col-6
-            flex-basis: 450px
-            flex-grow: 1
-
-            h1
-                margin-bottom: 0
-                font:
-                    family: $dm-serif
-                    weight: bold
-                    size: 2.5rem
-
-            p.contact
-                &#emergency
+    #contact-button-container
+        button.contact
+            border: none
+            &#emergency
+                margin-bottom: 25px
+                background: white
+                color: $red
+                &:hover
+                    background: #F2BB05
+                    color: #23231A
+            &#non-emergency
+                background: rgba(255, 255, 255, 0.2)
+                color: white
+                &:hover
                     background: white
                     color: $red
-                    &:hover
-                        background: #F2BB05
-                        color: #23231A
-                &#non-emergency
-                    background: rgba(255, 255, 255, 0.2)
-                    color: white
-                    &:hover
-                        background: white
-                        color: $red
 
+#hero.page-hero
+    background: $black    
+    color: white
 section#quick-links
     background: $red
     .container
-        justify-content: space-between
-        gap: 15px
-        div
-            flex-basis: 200px
-            grow: 1
+        div.col-md-3
+            height: 200px
             text-align: center
-            height: 150px
             color: white
             display: flex
             justify-content: stretch
@@ -149,47 +140,98 @@ section#quick-links
                 font-size: 1.25rem
 
 section#about
-    padding-top: 50px
-    .container
-        
-        padding-bottom: 100px
+    img
+        object-fit: cover
+        width: 100%
+        height: auto
+        position: relative
+    #img-offset
+        position: relative
+        width: 100%
+        height: 100%
+    #img-offset::after
+        content: ""
+        position: absolute
+        top: 20px
+        left: -20px
+        width: 100%
+        height: 100%
+        background: $yellow
 
-        .col-50
-            width: 50%
-        
-        #text-stat 
-            justify-content: space-between
-            display: flex
-        img
+    #services
+        .col-md-6
+            p:first-of-type
+                display: flex
+                align-items: center
+
+        i.fa-solid
+            font-size: 3em
+            color: $red
+            margin-right: 15px
+
+section#volunteer
+    background-image: url("https://images.pexels.com/photos/3013676/pexels-photo-3013676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    min-height: 450px
+    display: grid
+    color: white
+    a.button
+        background: $red
+        color: white
+section#volunteer::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6))
+
+section#community-events
+    .event-card
+        border: solid 1px $grey
+        padding: 0
+        @media (min-width: 768px)
+            width: 31%
+        img.event-img
+            object-fit: cover
+            width: 100%
+        .event-content
+            padding: 20px
+            p.small
+                margin-bottom: 5px
+            p.bold
+                font-size: 1.2rem
+    .event-card.dark
+        position: relative
+        .event-content
+            position: absolute
+            top: 0
             width: 100%
             height: 100%
-            object-fit: cover
-    
-        a.button
-            flex-basis: 150px
-            background: white
-    #volunteer-float
-        div
-            width: 850px
-            position: relative
-            background: $yellow
-
-        
-.container
-    justify-content: space-around
-    .col-8
-        width: 66.66%
-
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9))
+            display: flex
+            color: white
+            flex-direction: column
+            justify-content: end
+        img.event-img
+            height: 100%
+    .event-card.light
+       
 
 .flex.space-between
     justify-content: space-between  
 .flex.wrap
     flex-wrap: wrap
 footer
-    background: #23231A
+    background: $black
     color: white
     padding: 75px 0
     font-size: 1.25rem
+    border-top: 1rem solid $grey
 
     a.button
         color: white
@@ -209,3 +251,16 @@ footer
             color: white
 
 @import 'public-education.sass'
+
+// Contact page
+.contact-email 
+    text-decoration: none
+    padding: 10px
+    transition: ease-in 300ms
+    border: solid 1px transparent
+    &:hover
+        border-bottom: solid 1px $red
+        cursor: pointer
+    i
+        color: $red
+        margin-right: 10px
