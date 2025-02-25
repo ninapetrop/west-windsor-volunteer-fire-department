@@ -98,12 +98,6 @@
   background: #d10005;
   color: white;
 }
-#public-education-container #public-education-content .list-item {
-  margin-top: 10vw;
-}
-#public-education-container #public-education-content .list-item:first-of-type {
-  margin-top: 0;
-}
 #public-education-container #public-education-content h4 {
   margin-top: 75px;
   margin-bottom: 15px;
