@@ -18,7 +18,6 @@
         <div class="container-fluid container-lg">
           <a class="navbar-brand" href="#">
             <div>
-                <img src="https://townmapsusa.com/images/maps/map_of_west_windsor_vt.jpg">
                 <p>West Windsor Volunteer Fire Department</p>
             </div></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +29,7 @@
                 <a class="nav-link active" aria-current="page" href="#"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/about.html">About</a>
+                <a class="nav-link" href="/contact.html">Contact</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="/public-education/page.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -113,18 +112,21 @@
                 <div class="modal-body">
                     <p>Fill out the form below. A West Windsor Fire official will contact you via email with the permit and additional questions if required.</p>
 
-                    <form>
+                    <form
+                      method="POST"
+                      action="https://script.google.com/macros/s/AKfycbwNpHgdggRTB127TGoxPL1kCtaUFy4RP7vuR0SjOKfix0ttNRgpXbJWGFRxI5p7Wrev/exec"
+                    >
                         <div class="mb-3">
                             <label for="fullNameInput" class="form-label">Full name</label>
-                            <input type="email" class="form-control" id="fullNameInput" aria-describedby="fullNameHelp" placeholder="John Doe">
+                            <input name="Name" type="text" class="form-control" id="fullNameInput" aria-describedby="fullNameHelp" placeholder="John Doe">
                           </div>
                         <div class="mb-3">
                           <label for="emailInput" class="form-label">Email address</label>
-                          <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="jdoe@example.com">
+                          <input name="Email" type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="jdoe@example.com">
                         </div>
                         <div class="mb-3">
                             <label for="burnDescInput" class="form-label">Burn description</label>
-                            <textarea type="email" class="form-control" id="emailInput" rows="3" aria-describedby="burnDescInput" placeholder="30-foot brush pile in field"></textarea>
+                            <textarea name="Burn Description" type="email" class="form-control" id="burnDescInput" rows="3" aria-describedby="burnDescInput" placeholder="30-foot brush pile in field"></textarea>
                             <div id="burnDescInput" class="form-text">Describe the size, content, and location of your burn</div>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>

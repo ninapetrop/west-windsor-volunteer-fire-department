@@ -164,12 +164,12 @@ h2 {
   text-decoration: underline;
 }
 
+nav.navbar {
+  padding: 20px;
+}
 nav.navbar a.navbar-brand div {
   display: flex;
   align-items: center;
-}
-nav.navbar a.navbar-brand div img {
-  height: 80px;
 }
 nav.navbar a.navbar-brand div p {
   margin-bottom: 0;
@@ -278,7 +278,7 @@ section#about #services i.fa-solid {
 }
 
 section#volunteer {
-  background-image: url("https://images.pexels.com/photos/3013676/pexels-photo-3013676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-image: url("/images/fire-2.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
