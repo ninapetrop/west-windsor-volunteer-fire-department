@@ -166,13 +166,19 @@ h2 {
 
 nav.navbar {
   padding: 20px;
+  transition: box-shadow 0.3s ease;
 }
-nav.navbar a.navbar-brand div {
-  display: flex;
-  align-items: center;
+nav.navbar a.navbar-brand {
+  background: #d10005;
+  color: white;
+  padding: 15px;
 }
 nav.navbar a.navbar-brand div p {
   margin-bottom: 0;
+}
+
+nav.navbar.navbar-shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 #hero {
@@ -476,12 +482,6 @@ footer ul#footer-nav li a {
 #public-education-container div#content-nav a.active {
   background: #d10005;
   color: white;
-}
-#public-education-container #public-education-content .list-item {
-  margin-top: 10vw;
-}
-#public-education-container #public-education-content .list-item:first-of-type {
-  margin-top: 0;
 }
 #public-education-container #public-education-content h4 {
   margin-top: 75px;
