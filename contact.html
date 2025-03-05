@@ -39,7 +39,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Volunteeer</a>
+            <a class="nav-link" href="volunteer.html">Volunteer</a>
           </li>
         </ul>
         <div>
@@ -67,8 +67,6 @@
                 <h5 class="mt-5"><strong>Assistant Fire Chief,</strong> Ryan Lather</h5>
                 <a class="ms-3 contact-email"><i class="fa-regular fa-envelope margin-right"></i> ryan@wwvfd.com</a>
 
-                <h5 class="mt-5"><strong>Fire Warden,</strong> Mike Spackman</h5>
-                <a class="ms-3 contact-email"><i class="fa-regular fa-envelope margin-right"></i> mike@wwvfd.com</a>
 
         </div>
         <div class="col-lg-6 my-5 p-md-3">
@@ -102,7 +100,7 @@
             </div>
 
         </div>
-        <!-- Modal -->
+        <!-- Modal -- Burn Permit -->
         <div class="modal fade" id="burnPermitModal" tabindex="-1" aria-labelledby="burnPermitModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
@@ -171,6 +169,36 @@
               </div>
           </div>
       </div>
+      <!-- Modal -- Volunteer Inquiry -->
+      <div class="modal fade" id="volunteerInquiry" tabindex="-1" aria-labelledby="volunteerInquiryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Volunteer inquiry form</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <p>Fill out the form below to learn more about becoming a volunteer. A West Windsor Fire official will contact you via email.</p>
+    
+                    <form id="volunteerInquiry" class="needs-validation" novalidate
+                          method="POST"
+                          action="#">
+                        <div class="mb-3">
+                            <label for="fullNameInput" class="form-label">Full name</label>
+                            <input name="Name" type="text" class="form-control" id="fullNameInput" aria-describedby="fullNameHelp" placeholder="John Doe" required>
+                            <div class="invalid-feedback">Please enter your full name.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Email address</label>
+                            <input name="Email" type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="jdoe@example.com" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
   
     </div>
 </section>
@@ -195,11 +223,11 @@
                 
         
                 <div class="col-6 col-md-4 offset-md-2 mb-3">
-                <h5>Section</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Burn permits</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Volunteer</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Public Education</a></li>
+                  <ul class="nav flex-column" id="footer-nav">
+                    <h4 class="mb-3">Navigation</h5>
+                    <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0">Contact</a></li>
+                    <li class="nav-item mb-2"><a href="public-education/page.html" class="nav-link p-0">Public Education</a></li>
+                    <li class="nav-item mb-2"><a href="volunteer.html" class="nav-link p-0">Volunteer</a></li>
                 </ul>
                 </div>
         
