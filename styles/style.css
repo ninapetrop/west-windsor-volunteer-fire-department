@@ -169,7 +169,7 @@ nav.navbar {
   transition: box-shadow 0.3s ease;
 }
 nav.navbar a.navbar-brand {
-  background: #d10005;
+  background: #a70004;
   color: white;
   padding: 15px;
 }
@@ -182,7 +182,7 @@ nav.navbar.navbar-shadow {
 }
 
 #hero {
-  background: #d10005;
+  background: #a70004;
   font-family: "Roboto", serif;
   color: white;
 }
@@ -203,7 +203,7 @@ nav.navbar.navbar-shadow {
 #hero #contact-button-container button.contact#emergency {
   margin-bottom: 25px;
   background: white;
-  color: #d10005;
+  color: #a70004;
 }
 
 #hero.page-hero {
@@ -212,7 +212,7 @@ nav.navbar.navbar-shadow {
 }
 
 section#quick-links {
-  background: #d10005;
+  background: #a70004;
 }
 section#quick-links .container div.col-md-3 {
   height: 200px;
@@ -267,7 +267,7 @@ section#about #services .col-md-6 p:first-of-type {
 }
 section#about #services i.fa-solid {
   font-size: 3em;
-  color: #d10005;
+  color: #a70004;
   margin-right: 15px;
 }
 
@@ -282,7 +282,7 @@ section#volunteer {
   color: white;
 }
 section#volunteer a.button {
-  background: #d10005;
+  background: #a70004;
   color: white;
 }
 
@@ -353,10 +353,10 @@ footer {
 }
 footer a.button {
   color: white;
-  background-color: #d10005;
+  background-color: #a70004;
 }
 footer i.fa-regular, footer i.fa-solid {
-  color: #d10005;
+  color: #a70004;
 }
 footer .container .col-6 {
   flex-basis: 300px;
@@ -464,11 +464,11 @@ footer ul#footer-nav li a {
   font-size: 1.2rem;
   margin: 20px 0;
   border: none;
-  border-left: solid 2px #d10005;
+  border-left: solid 2px #a70004;
   border-radius: 0;
 }
 #public-education-container div#content-nav a.active {
-  background: #d10005;
+  background: #a70004;
   color: white;
 }
 #public-education-container #public-education-content h4 {
@@ -491,10 +491,10 @@ footer ul#footer-nav li a {
   border: solid 1px transparent;
 }
 .contact-email:hover {
-  border-bottom: solid 1px #d10005;
+  border-bottom: solid 1px #a70004;
   cursor: pointer;
 }
 .contact-email i {
-  color: #d10005;
+  color: #a70004;
   margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */
