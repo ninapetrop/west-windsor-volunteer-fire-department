@@ -205,18 +205,6 @@ nav.navbar.navbar-shadow {
   background: white;
   color: #d10005;
 }
-#hero #contact-button-container button.contact#emergency:hover {
-  background: #F2BB05;
-  color: #23231A;
-}
-#hero #contact-button-container button.contact#non-emergency {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-}
-#hero #contact-button-container button.contact#non-emergency:hover {
-  background: white;
-  color: #d10005;
-}
 
 #hero.page-hero {
   background: #23231A;
