@@ -91,11 +91,11 @@
   font-size: 1.2rem;
   margin: 20px 0;
   border: none;
-  border-left: solid 2px #d10005;
+  border-left: solid 2px #a70004;
   border-radius: 0;
 }
 #public-education-container div#content-nav a.active {
-  background: #d10005;
+  background: #a70004;
   color: white;
 }
 #public-education-container #public-education-content h4 {
