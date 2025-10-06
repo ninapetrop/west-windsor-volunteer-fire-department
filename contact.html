@@ -60,7 +60,7 @@
     <div class="row align-items-center g-5 py-5">
         <div class="col-lg-6 p-lg-5">
             <h2>Contact us</h2>
-            <p class="lead">For inquiries specific to burn permits or volunteering, please use the dedicated forms. All other inquries may be directed to West Windsor Fire officials.</p> 
+            <p class="lead">For inquiries specific to burn permits or volunteering, please use the listed contact methods. All other inquries may be directed to West Windsor Fire officials.</p> 
                 <h5 class="mt-5"><strong>Fire Chief,</strong> Erik Boedtker</h5>
                 <a class="ms-3 contact-email"><i class="fa-regular fa-envelope margin-right"></i> erik@wwvfd.com</a>
 
@@ -78,10 +78,20 @@
                             <b>Burn permits</b>
                         </p>
                         <p>Permits are required for burns. Not obtaining one could result in a fine.</p>
+                        <p>To request a burn permit, please contact ____ </p>
+                            
+                        <ul class="list-unstyled">
+                            <li class="my-3">
+                                <a class="contact-email"><i class="fa-regular fa-envelope margin-right"></i> person@wwvfd.com</a>
+                            </li>
+                            <li class="my-3">                        
+                                <span class="contact-phone"><i class="fa-solid fa-phone"></i> 999-999-9999</span> 
+                            </li>
+                        </ul>
+
                         <p>Make sure to read the latest <a href="public-education/page.html#firepit">safety information</a> before you burn.</p>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#burnPermitModal">
-                            Apply for a burn permit
-                          </button>
+
+
                           
                     </div>
                     <div class="col-md-6 p-md-3">
@@ -100,75 +110,8 @@
             </div>
 
         </div>
-        <!-- Modal -- Burn Permit -->
-        <div class="modal fade" id="burnPermitModal" tabindex="-1" aria-labelledby="burnPermitModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Burn permit request</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body" id="modal-body">
-                      <p>Fill out the form below. A West Windsor Fire official will contact you via email with the permit and additional questions if required.</p>
-      
-                      <form id="burnPermit" class="needs-validation" novalidate
-                            method="POST"
-                            action="https://script.google.com/macros/s/AKfycbwNpHgdggRTB127TGoxPL1kCtaUFy4RP7vuR0SjOKfix0ttNRgpXbJWGFRxI5p7Wrev/exec">
-                          <div class="mb-3">
-                              <label for="fullNameInput" class="form-label">Full name</label>
-                              <input name="Name" type="text" class="form-control" id="fullNameInput" aria-describedby="fullNameHelp" placeholder="John Doe" required>
-                              <div class="invalid-feedback">Please enter your full name.</div>
-                          </div>
-                          <div class="mb-3">
-                              <label for="emailInput" class="form-label">Email address</label>
-                              <input name="Email" type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="jdoe@example.com" required>
-                              <div class="invalid-feedback">Please enter a valid email address.</div>
-                          </div>
-                          <div class="mb-3">
-                              <label for="burnDescInput" class="form-label">Burn description</label>
-                              <textarea name="Burn Description" type="text" class="form-control" id="burnDescInput" rows="3" aria-describedby="burnDescInput" placeholder="30-foot brush pile in field" required></textarea>
-                              <div class="invalid-feedback">Please enter a description of the burn.</div>
-                              <div id="burnDescInput" class="form-text">Describe the size, content, and location of your burn</div>
-                          </div>
-                          <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
-                      </form>
-                      <script>
-                          window.addEventListener("load", function() {
-                              const form = document.getElementById('burnPermit');
-                              form.addEventListener("submit", function(e) {
-                                  e.preventDefault(); // Prevent default submission first.
-                                  if (!form.checkValidity()) {
-                                      e.stopPropagation();
-                                      form.classList.add('was-validated');
-                                      return; // Stop the function if the form is invalid.
-                                  }
-      
-                                  form.classList.add('was-validated'); // Add was-validated even if valid.
-                                  const data = new FormData(form);
-                                  const action = e.target.action;
-                                  fetch(action, {
-                                      method: 'POST',
-                                      body: data,
-                                  })
-                                  .then(() => {
-                                      document.getElementById("modal-body").innerHTML = "<p><strong>Your response has been submitted!</strong><br><br>This window will auto-close within 2 seconds.</p>";
-                                      setTimeout(function() {
-                                          $('#burnPermitModal').modal('toggle');
-                                      }, 2000);
-                                  })
-                                  .catch(error => {
-                                      document.getElementById("modal-body").innerHTML = "<p><strong>An error occurred while submitting your response. Please try again.</strong></p>";
-                                      console.error('Error submitting form:', error);
-                                  });
-      
-                              });
-                          });
-                      </script>
-      
-                  </div>
-              </div>
-          </div>
-      </div>
+
+        
       <!-- Modal -- Volunteer Inquiry -->
       <div class="modal fade" id="volunteerInquiry" tabindex="-1" aria-labelledby="volunteerInquiryModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

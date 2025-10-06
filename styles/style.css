@@ -497,4 +497,12 @@ footer ul#footer-nav li a {
 .contact-email i {
   color: #a70004;
   margin-right: 10px;
+}
+
+.contact-phone {
+  padding: 10px;
+}
+.contact-phone i {
+  color: #a70004;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */
