@@ -33,13 +33,16 @@
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="public-education/page.html">
               Public Education
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="volunteer.html">Volunteer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fundraising.html">Fundraising</a>
           </li>
         </ul>
         <div>
@@ -62,10 +65,10 @@
             <h2>Contact us</h2>
             <p class="lead">For inquiries specific to burn permits or volunteering, please use the listed contact methods. All other inquries may be directed to West Windsor Fire officials.</p> 
                 <h5 class="mt-5"><strong>Fire Chief,</strong> Erik Boedtker</h5>
-                <a class="ms-3 contact-email"><i class="fa-regular fa-envelope margin-right"></i> erik@wwvfd.com</a>
+                <a class="ms-3 contact-email"><i class="fa-regular fa-envelope margin-right"></i> chief@westwindsorfire.net</a>
 
-                <h5 class="mt-5"><strong>Assistant Fire Chief,</strong> Ryan Lather</h5>
-                <a class="ms-3 contact-email"><i class="fa-regular fa-envelope margin-right"></i> ryan@wwvfd.com</a>
+                <h5 class="mt-5">General Inquiries</h5>
+                <a class="ms-3 contact-email"><i class="fa-regular fa-envelope margin-right"></i> westwindsorfiredepartment@gmail.com</a>
 
 
         </div>
@@ -77,19 +80,16 @@
                             <i class="fa-solid fa-tree" class="bigger"></i>
                             <b>Burn permits</b>
                         </p>
-                        <p>Permits are required for burns. Not obtaining one could result in a fine.</p>
-                        <p>To request a burn permit, please contact ____ </p>
+                        <p>Permits MUST be obtained to have an open fire in Vermont. An open fire, no matter how small, should never be left unattended.</p>
+                        <p>To request a burn permit, please contact Mike Spackman </p>
                             
                         <ul class="list-unstyled">
-                            <li class="my-3">
-                                <a class="contact-email"><i class="fa-regular fa-envelope margin-right"></i> person@wwvfd.com</a>
-                            </li>
                             <li class="my-3">                        
-                                <span class="contact-phone"><i class="fa-solid fa-phone"></i> 999-999-9999</span> 
+                                <span class="contact-phone"><i class="fa-solid fa-phone"></i> 802-484-9142</span> 
                             </li>
                         </ul>
 
-                        <p>Make sure to read the latest <a href="public-education/page.html#firepit">safety information</a> before you burn.</p>
+                        <p>Please plan ahead, as permit requests may take up to 24 hours to approve.</p>
 
 
                           
@@ -123,10 +123,7 @@
                 <div class="modal-body" id="modal-body">
                     <p>Fill out the form below to learn more about becoming a volunteer. A West Windsor Fire official will contact you via email.</p>
     
-                    <form id="volunteerInquiry" class="needs-validation" novalidate
-                          method="POST"
-                          action="#">
-                        <div class="mb-3">
+                    <form id="volunteerForm" class="needs-validation" novalidate>                        <div class="mb-3">
                             <label for="fullNameInput" class="form-label">Full name</label>
                             <input name="Name" type="text" class="form-control" id="fullNameInput" aria-describedby="fullNameHelp" placeholder="John Doe" required>
                             <div class="invalid-feedback">Please enter your full name.</div>
@@ -155,12 +152,6 @@
                     <div class="mb-12">
                         <h4 class="mb-3">West Windsor Volunteer Fire Department Fire</h4>
                         <p><i class="fa-solid fa-location-dot margin-right"></i> 889 VT-44, Brownsville, VT 05037</p>
-                        <p><i class="fa-solid fa-phone margin-right"></i>(802) 484-7872</p>
-                    </div>
-                    <div>
-                        <h4 class="mb-3">Contact the chiefs</h5>
-                        <p><i class="fa-regular fa-envelope margin-right"></i> Fire Chief, Erik Boedtker</p>
-                        <p><i class="fa-regular fa-envelope margin-right"></i> Assistant Fire Chief, Ryan Lather</p>
                     </div>
                 </div>
                 
@@ -169,16 +160,17 @@
                   <ul class="nav flex-column" id="footer-nav">
                     <h4 class="mb-3">Navigation</h5>
                     <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0">Contact</a></li>
-                    <li class="nav-item mb-2"><a href="public-education/page.html" class="nav-link p-0">Public Education</a></li>
+                    <!-- <li class="nav-item mb-2"><a href="public-education/page.html" class="nav-link p-0">Public Education</a></li> -->
                     <li class="nav-item mb-2"><a href="volunteer.html" class="nav-link p-0">Volunteer</a></li>
-                </ul>
+                    <li class="nav-item mb-2"><a href="fundraising.html" class="nav-link p-0">Fundraising</a></li>
+
+                  </ul>
                 </div>
         
                 
             </div>
         
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                <p>© 2024 Company, Inc. All rights reserved.</p>
                 <ul class="list-unstyled d-flex">
                 <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
                 <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
@@ -187,5 +179,50 @@
             </div>
         </div>
     </footer>
+    <script>
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwHmrhkYO7HbiflQoFwnoNfbOJJxvmU0NPU9XGzAv-un2fRwm3UqQQZcGJdX61Ce0Vd/exec'
+const form = document.getElementById('volunteerForm');
+// Initialize the Bootstrap modal instance
+const modalElement = document.getElementById('volunteerInquiry');
+const bootstrapModal = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  
+  if (!form.checkValidity()) {
+    e.stopPropagation();
+    form.classList.add('was-validated');
+    return;
+  }
+
+  const submitButton = form.querySelector('[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.innerHTML = "Sending...";
+
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        // 1. Reset the form and validation styles
+        form.reset();
+        form.classList.remove('was-validated');
+        submitButton.innerHTML = "Success!";
+
+        // 2. Wait 1.5 seconds so the user sees the "Success" state, then close everything
+        setTimeout(() => {
+            bootstrapModal.hide();
+            
+            // 3. Optional: Reset button for the next time the modal opens
+            submitButton.disabled = false;
+            submitButton.innerHTML = "Submit";
+        }, 1500);
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        alert("Something went wrong. Please try again.");
+        submitButton.disabled = false;
+        submitButton.innerHTML = "Submit";
+    });
+});
+    </script>
 </body>
 </html>
