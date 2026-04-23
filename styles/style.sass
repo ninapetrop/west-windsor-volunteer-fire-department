@@ -1,11 +1,14 @@
 // Import values
-@import 'fonts.sass'
-@import 'vars.sass'
+@use 'fonts'
+@use 'vars'
+@use 'public-education'
 
 
 body
     font-size: 16px
-    font-family: $roboto
+    font-family: fonts.$roboto
+
+
 
 .fa-solid.margin-right
     padding-right: 10px
@@ -35,7 +38,7 @@ p.bigger
     height: 50px
 
 h1, h2, h3
-    font-family: $dm-serif
+    font-family: fonts.$dm-serif
 
 h2
     font-size: 2.8rem !important
@@ -67,7 +70,7 @@ ul.no-style
     display: inline-block
     text-decoration: none
     font: 
-        family: $roboto
+        family: fonts.$roboto
         weight: 500
         size: 1.12rem
     transition: ease-in 300ms
@@ -79,7 +82,7 @@ nav.navbar
     padding: 20px
     transition: box-shadow 0.3s ease
     a.navbar-brand
-        background: $red
+        background: vars.$red
         color: white
         padding: 15px
         div p
@@ -89,12 +92,12 @@ nav.navbar.navbar-shadow
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
                 
 #hero 
-    background: $red
-    font-family: $roboto
+    background: vars.$red
+    font-family: fonts.$roboto
     color: white
     h1
         font:
-            family: $dm-serif
+            family: fonts.$dm-serif
             weight: bold
             size: 2.5rem
     div
@@ -109,13 +112,13 @@ nav.navbar.navbar-shadow
             &#emergency
                 margin-bottom: 25px
                 background: white
-                color: $red
+                color: vars.$red
 
 #hero.page-hero
-    background: $black    
+    background: vars.$black    
     color: white
 section#quick-links
-    background: $red
+    background: vars.$red
     .container
         div.col-md-3
             height: 200px
@@ -124,7 +127,7 @@ section#quick-links
             display: flex
             justify-content: stretch
             font: 
-                family: $roboto
+                family: fonts.$roboto
             a 
                 width: 100%
                 height: 100%
@@ -156,7 +159,7 @@ section#about
         left: -20px
         width: 100%
         height: 100%
-        background: $yellow
+        background: vars.$yellow
 
     #services
         .col-md-6
@@ -166,7 +169,7 @@ section#about
 
         i.fa-solid
             font-size: 3em
-            color: $red
+            color: vars.$red
             margin-right: 15px
 
 section#volunteer
@@ -179,7 +182,7 @@ section#volunteer
     display: grid
     color: white
     a.button
-        background: $red
+        background: vars.$red
         color: white
 section#volunteer::after
     content: ""
@@ -192,7 +195,7 @@ section#volunteer::after
 
 section#community-events
     .event-card
-        border: solid 1px $grey
+        border: solid 1px vars.$grey
         padding: 0
         @media (min-width: 768px)
             width: 31%
@@ -219,7 +222,6 @@ section#community-events
             justify-content: end
         img.event-img
             height: 100%
-    .event-card.light
        
 
 .flex.space-between
@@ -227,18 +229,18 @@ section#community-events
 .flex.wrap
     flex-wrap: wrap
 footer
-    background: $black
+    background: vars.$black
     color: white
     padding: 75px 0
     font-size: 1.25rem
-    border-top: 1rem solid $grey
+    border-top: 1rem solid vars.$grey
 
     a.button
         color: white
-        background-color: $red
+        background-color: vars.$red
 
     i.fa-regular, i.fa-solid
-        color: $red 
+        color: vars.$red 
     .container
         .col-6 
             flex-basis: 300px
@@ -250,7 +252,6 @@ footer
         li a
             color: white
 
-@import 'public-education.sass'
 
 // Contact page
 .contact-email 
@@ -259,14 +260,14 @@ footer
     transition: ease-in 300ms
     border: solid 1px transparent
     &:hover
-        border-bottom: solid 1px $red
+        border-bottom: solid 1px vars.$red
         cursor: pointer
     i
-        color: $red
+        color: vars.$red
         margin-right: 10px
 
 .contact-phone
     padding: 10px
     i
-        color: $red
+        color: vars.$red
         margin-right: 10px

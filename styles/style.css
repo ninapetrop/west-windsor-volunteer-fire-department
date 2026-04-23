@@ -82,6 +82,35 @@
   font-style: italic;
 }
 
+#public-education-container div#content-nav {
+  position: sticky;
+  top: 100px;
+}
+#public-education-container div#content-nav a {
+  color: #23231A;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  border: none;
+  border-left: solid 2px #a70004;
+  border-radius: 0;
+}
+#public-education-container div#content-nav a.active {
+  background: #a70004;
+  color: white;
+}
+#public-education-container #public-education-content h4 {
+  margin-top: 75px;
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+  font-family: "DM Serif Text", serif;
+}
+#public-education-container #public-education-content h5 {
+  font-size: 1.6rem;
+  font-family: "DM Serif Text", serif;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
 body {
   font-size: 16px;
   font-family: "Roboto", serif;
@@ -345,6 +374,7 @@ section#community-events .event-card.dark .event-content {
 section#community-events .event-card.dark img.event-img {
   height: 100%;
 }
+
 .flex.space-between {
   justify-content: space-between;
 }
@@ -378,119 +408,6 @@ footer ul#footer-nav li {
 }
 footer ul#footer-nav li a {
   color: white;
-}
-
-.dm-serif-text-regular {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.dm-serif-text-regular-italic {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.roboto-thin {
-  font-family: "Roboto", serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.roboto-light {
-  font-family: "Roboto", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.roboto-regular {
-  font-family: "Roboto", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-medium {
-  font-family: "Roboto", serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.roboto-bold {
-  font-family: "Roboto", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.roboto-black {
-  font-family: "Roboto", serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.roboto-thin-italic {
-  font-family: "Roboto", serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.roboto-light-italic {
-  font-family: "Roboto", serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.roboto-regular-italic {
-  font-family: "Roboto", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.roboto-medium-italic {
-  font-family: "Roboto", serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.roboto-bold-italic {
-  font-family: "Roboto", serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.roboto-black-italic {
-  font-family: "Roboto", serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-#public-education-container div#content-nav {
-  position: sticky;
-  top: 100px;
-}
-#public-education-container div#content-nav a {
-  color: #23231A;
-  font-size: 1.2rem;
-  margin: 20px 0;
-  border: none;
-  border-left: solid 2px #a70004;
-  border-radius: 0;
-}
-#public-education-container div#content-nav a.active {
-  background: #a70004;
-  color: white;
-}
-#public-education-container #public-education-content h4 {
-  margin-top: 75px;
-  margin-bottom: 15px;
-  font-size: 2.2rem;
-  font-family: "DM Serif Text", serif;
-}
-#public-education-container #public-education-content h5 {
-  font-size: 1.6rem;
-  font-family: "DM Serif Text", serif;
-  margin-top: 25px;
-  margin-bottom: 15px;
 }
 
 .contact-email {

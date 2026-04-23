@@ -1,28 +1,28 @@
-@import 'vars.sass'
-@import 'fonts.sass'
+@use 'vars.sass'
+@use 'fonts.sass'
 
 #public-education-container
     div#content-nav
         position: sticky
         top: 100px
         a
-            color: $black
+            color: vars.$black
             font-size: 1.2rem
             margin: 20px 0
             border: none
-            border-left: solid 2px $red
+            border-left: solid 2px vars.$red
             border-radius: 0
         a.active
-            background: $red
+            background: vars.$red
             color: white
     #public-education-content
         h4
             margin-top: 75px
             margin-bottom: 15px
             font-size: 2.2rem
-            font-family: $dm-serif
+            font-family: fonts.$dm-serif
         h5
             font-size: 1.6rem
-            font-family: $dm-serif
+            font-family: fonts.$dm-serif
             margin-top: 25px
             margin-bottom: 15px
